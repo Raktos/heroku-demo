@@ -16,8 +16,9 @@ $(document).ready(function() {
             text: $('#submitForm input[name="text"]').val()
         };
         $.ajax('api/send', {
-//            'data':
-            //MISSED SOMETHING HERE
+            'data': data,
+            success: submitted,
+            error: failed
         })
     }
 
